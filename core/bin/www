@@ -1,3 +1,4 @@
+
 const appBootstraper=require("../src/app");
 const http = require("http");
 
@@ -10,4 +11,3 @@ appBootstraper().then(app=>{
     console.log(`Application started on port ${port}`);
 })
 .catch(console.log);
-
