@@ -1,3 +1,7 @@
 const routes = require("./routes");
+const models = require("./model");
 
-module.exports = routes;
+module.exports = {
+  routes,
+  models
+};

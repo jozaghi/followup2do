@@ -1,3 +1,6 @@
+module.exports = require("./database");
+
+/*
 const mysql = require("mysql");
 const config = require("../../../config");
 
@@ -21,3 +24,4 @@ const connectionBuilder = async () =>
 module.exports = {
   connect: connectionBuilder
 };
+*/

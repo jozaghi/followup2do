@@ -30,6 +30,7 @@
     "express-validation": "^1.0.2",
     "joi": "12",
     "jsonwebtoken": "^8.4.0",
+    "module-alias": "^2.1.0",
     "mysql": "^2.16.0",
     "password-hash": "^1.2.2"
   },
@@ -54,5 +55,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "_moduleAliases":{
+    "@db":"./src/lib/database",
+    "@lib":"./src/lib"
   }
 }

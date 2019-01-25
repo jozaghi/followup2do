@@ -1,9 +1,13 @@
-const app=require("../src/app");
+const appBootstraper=require("../src/app");
 const http = require("http");
 
-const port = process.env.PORT || 3000;
-app.set("port",port);
+appBootstraper().then(app=>{
+    const port = process.env.PORT || 3000;
+    app.set("port",port);
 
-const server = http.createServer(app);
-server.listen(port);
-console.log(`Application started on port ${port}`);
+    const server = http.createServer(app);
+    server.listen(port);
+    console.log(`Application started on port ${port}`);
+})
+.catch(console.log);
+

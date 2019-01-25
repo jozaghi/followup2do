@@ -1,9 +1,9 @@
-const { getUserByEmail } = require("../persistance");
+const model = require("../persistance");
 const makeSignupDecision = require("./service");
 const { token } = require("../../lib/security");
 
 module.exports.getSignupDecision = async ({ email, password }) => {
-  const user = await getUserByEmail(email);
+  const user = await model.getUserByEmail(email);
   const decision = makeSignupDecision(user, password);
 
   if (decision.accepted) {
